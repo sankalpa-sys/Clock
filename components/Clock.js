@@ -52,7 +52,7 @@ function Clock() {
 
   return (
     <div className="w-full h-screen bg-black flex items-center justify-center text-white">
-      <div className="lg:text-7xl text-4xl tracking-widest font-mono relative ">
+      <div className="lg:text-7xl font-bold text-4xl tracking-widest font-mono relative ">
       {hour < 10 && "0"} {hour} : {minute < 10 && "0"}
         {minute} : {second < 10 && "0"}
         {second}

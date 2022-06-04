@@ -26,6 +26,7 @@ function Weather() {
       setWeather(res.data.weather)
       setdata(res.data)
       setError(false)
+      setCity('')
       
     } catch (err) {
       

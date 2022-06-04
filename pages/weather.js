@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, {useState, useEffect} from "react";
 import { ArrowUpIcon,ArrowDownIcon, SearchIcon } from "@heroicons/react/outline";
 import axios from "axios";
+import Fade from 'react-reveal/Fade';
 
 function Weather() {
 
@@ -50,6 +51,7 @@ function Weather() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Fade left>
       {!error ? (
         <section className={` h-auto py-10 w-[90%] lg:w-[30%] shadow-xl bg-pink-100 rounded-lg items-center space-y-5 flex-col ${!weather || !sys || !main ? "hidden": "flex"}`}>
         <div className="h-28 w-28 relative">
@@ -84,11 +86,11 @@ function Weather() {
           </div>
           <div className="flex flex-col space-y-2 items-center border-r px-3">
             <h1 className="text-gray-500 text-sm text-light">Wind Speed</h1>
-            <p className="text-gray-800 text-sm font-semibold">{data.wind && data.wind.speed} km/hr</p>
+            <p className="text-gray-800 text-sm font-semibold">{data.wind && data.wind.speed} m/s</p>
           </div>
           <div className="flex flex-col space-y-2 items-center border-r px-3">
             <h1 className="text-gray-500 text-sm text-light">Pressure</h1>
-            <p className="text-gray-800 text-sm font-semibold">{main && main.pressure} mm/Hg</p>
+            <p className="text-gray-800 text-sm font-semibold">{main && main.pressure} hPa</p>
           </div>
         </div>
 
@@ -98,6 +100,9 @@ function Weather() {
       ):(
         <h1 className="font-bold text-gray-100 text-4xl font-mono">NO CITY FOUND!</h1>
       )}
+        </Fade>
+
+      
 
       <Link href={"/"}>
         <p className="underline cursor-pointer text-white absolute right-0 top-0 m-6">

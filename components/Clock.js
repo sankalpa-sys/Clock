@@ -64,7 +64,7 @@ function Clock() {
         </span>
       </div>
 
-      <Link href={'/weather'}><p className="cursor-pointer underline absolute top-0 right-0 p-6">Weather</p></Link>
+      <Link href={'/weather'}><p className="cursor-pointer text-red-600 border-b px-1 border-red-600 absolute top-3 right-3">Weather</p></Link>
     </div>
   );
 }

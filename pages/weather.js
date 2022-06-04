@@ -68,11 +68,11 @@ function Weather() {
 
         <main className="flex space-x-3">
           <div className="flex space-x-2 items-center">
-            <ArrowUpIcon className="h-8 w-8 text-green-400"/>
+            <ArrowUpIcon className="h-8 w-8 text-green-500"/>
             <p className="text-xl text-gray-500">{main && main.temp_max}°</p>
           </div>
           <div className="flex space-x-2 items-center">
-            <ArrowDownIcon className="h-8 w-8 text-blue-400"/>
+            <ArrowDownIcon className="h-8 w-8 text-blue-500"/>
             <p className="text-xl text-gray-500">{main && main.temp_min}°</p>
           </div>
         </main>

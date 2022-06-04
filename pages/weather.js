@@ -58,7 +58,7 @@ function Weather() {
 
       <Fade left>
       {!error ? (
-        <section className={` h-auto py-10 w-[90%] lg:w-[30%] shadow-xl shadow-gray-100/70 bg-pink-100 rounded-lg items-center space-y-5 flex-col ${!weather || !sys || !main ? "hidden": "flex"}`}>
+        <section className={` h-auto py-10 w-[90%] lg:w-[30%] shadow-xl shadow-gray-100/40 bg-pink-100 rounded-lg items-center space-y-5 flex-col ${!weather || !sys || !main ? "hidden": "flex"}`}>
         <div className="h-28 w-28 relative">
           <Image
             src={`https://openweathermap.org/img/w/${weather && weather[0].icon}.png`}

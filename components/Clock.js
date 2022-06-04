@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
+
 
 function Clock() {
   const [second, setSecond] = useState(0);
@@ -61,6 +63,8 @@ function Clock() {
           {day}
         </span>
       </div>
+
+      <Link href={'/weather'}><p className="cursor-pointer underline absolute top-0 right-0 p-6">Weather</p></Link>
     </div>
   );
 }
